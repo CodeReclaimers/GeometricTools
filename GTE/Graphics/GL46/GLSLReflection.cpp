@@ -3,7 +3,7 @@
 // Distributed under the Boost Software License, Version 1.0.
 // https://www.boost.org/LICENSE_1_0.txt
 // https://www.geometrictools.com/License/Boost/LICENSE_1_0.txt
-// File Version: 8.0.2025.05.10
+// File Version: 8.0.2026.02.19
 
 #include <Graphics/GL46/GTGraphicsGL46PCH.h>
 #include <Graphics/GL46/GLSLReflection.h>
@@ -834,7 +834,7 @@ void GLSLReflection::ReflectSubroutineUniforms(GLenum programInterface,
 
             SubroutineUniform& info = subUniforms[i];
             info.name = std::string(name.data());
-            info.location = results[IDX_NAME_LENGTH];
+            info.location = results[IDX_LOCATION];
             info.arraySize = results[IDX_ARRAY_SIZE];
 
             GLint numCompatibleSubroutines = results[IDX_NUM_ACTIVE_VARIABLES];
