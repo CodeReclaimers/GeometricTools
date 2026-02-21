@@ -3,7 +3,7 @@
 // Distributed under the Boost Software License, Version 1.0.
 // https://www.boost.org/LICENSE_1_0.txt
 // https://www.geometrictools.com/License/Boost/LICENSE_1_0.txt
-// File Version: 8.0.2025.05.10
+// File Version: 8.0.2026.02.21
 
 #pragma once
 
@@ -47,6 +47,7 @@ namespace gte
 
         // The angle A is not in [0,pi).
         LogError("Invalid angle.");
+        return static_cast<T>(0);
     }
 
     // The angle extracted from cosAngle is in [0,pi).
@@ -66,6 +67,7 @@ namespace gte
             {
                 // The angle A is pi.
                 LogError("Invalid angle.");
+                return static_cast<T>(0);
             }
         }
         else
@@ -110,6 +112,7 @@ namespace gte
 
         // The angle A is not in [0,pi).
         LogError("Invalid angle.");
+        return std::array<T, 2>{ static_cast<T>(0), static_cast<T>(0) };
     }
 
     // The angle extracted from cosAngle is in [0,pi). Although it is possible
@@ -139,6 +142,7 @@ namespace gte
             {
                 // The angle A is pi.
                 LogError("Invalid angle.");
+                return std::array<T, 2>{ static_cast<T>(0), static_cast<T>(0) };
             }
         }
         else
